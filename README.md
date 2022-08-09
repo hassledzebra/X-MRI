@@ -1,5 +1,5 @@
 # Fast MRI
-https://github.com/hasseledzerba/X-MRI
+https://github.com/hassledzebra/X-MRI
 
 # Abstract
 
