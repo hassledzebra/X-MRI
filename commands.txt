@@ -1,0 +1,26 @@
+python run_pretrained_unet_inference.py \
+    --data_path "/content/drive/MyDrive/fastMRI/X-MRI/singlecoil_challenge" \
+    --output_path "/content/drive/MyDrive/fastMRI/X-MRI/outputs/unetoutput" \
+    --challenge unet_knee_sc
+
+python run_pretrained_unet_inference.py \
+    --data_path "/content/drive/MyDrive/fastMRI/X-MRI/singlecoil_challenge" \
+    --output_path "/content/drive/MyDrive/fastMRI/X-MRI/outputs/unetoutput" \
+    --challenge unet_knee_sc
+
+python train_unet_demo.py \
+    --mode train \
+    --data_path "/content/drive/MyDrive/fastMRI/X-MRI/truncated/" \
+    --mask_type random
+
+
+
+python run_self_supervised_orig.py \
+    --data_path "/content/drive/MyDrive/fastMRI/X-MRI/truncated" \
+    --checkpoint_path "/content/drive/MyDrive/fastMRI/X-MRI/outputs/ssl_output/checkpoint" \
+    --device cuda
+
+pip install -r requirement.txt
+conda env create -f environement.PyYAML
+
+
